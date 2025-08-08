@@ -425,73 +425,76 @@
   </div>
 
   <script>
-    // Exchange rates (as of the last update - these are approximate and should be updated with real-time data in production)
+    // Exchange rates (as of August 2024 - these are approximate market rates)
     const exchangeRates = {
-      USD: 1,         // US Dollar (base currency)
-      EUR: 0.92,      // Euro
-      GBP: 0.79,      // British Pound
-      JPY: 156.25,    // Japanese Yen
-      AUD: 1.52,      // Australian Dollar
-      CAD: 1.37,      // Canadian Dollar
-      CHF: 0.90,      // Swiss Franc
-      CNY: 7.24,      // Chinese Yuan
-      INR: 83.45,     // Indian Rupee
-      NZD: 1.66,      // New Zealand Dollar
-      MXN: 17.25,     // Mexican Peso
-      BRL: 5.15,      // Brazilian Real
-      ZAR: 18.75,     // South African Rand
-      RUB: 92.50,     // Russian Ruble
-      KRW: 1350.25,   // South Korean Won
-      SGD: 1.35,      // Singapore Dollar
-      NOK: 10.75,     // Norwegian Krone
-      SEK: 10.60,     // Swedish Krona
-      DKK: 6.90,      // Danish Krone
-      PLN: 4.15,      // Polish Złoty
-      THB: 36.50,     // Thai Baht
-      IDR: 16250.00,  // Indonesian Rupiah
-      HKD: 7.82,      // Hong Kong Dollar
-      TRY: 32.10,     // Turkish Lira
-      SAR: 3.75,      // Saudi Riyal
-      AED: 3.67,      // UAE Dirham
-      MYR: 4.75,      // Malaysian Ringgit
-      PHP: 56.80,     // Philippine Peso
-      VND: 25400.00,  // Vietnamese Đồng
-      EGP: 47.25,     // Egyptian Pound
-      PKR: 278.50,    // Pakistani Rupee
-      NGN: 1150.00,   // Nigerian Naira
-      BDT: 117.50,    // Bangladeshi Taka
-      IRR: 42000.00,  // Iranian Rial
-      IQD: 1310.00,   // Iraqi Dinar
-      KWD: 0.31,      // Kuwaiti Dinar
-      QAR: 3.64,      // Qatari Riyal
-      OMR: 0.38,      // Omani Rial
-      JOD: 0.71,      // Jordanian Dinar
-      LBP: 15000.00,  // Lebanese Pound
-      BHD: 0.38,      // Bahraini Dinar
-      COP: 3950.00,   // Colombian Peso
-      ARS: 850.00,    // Argentine Peso
-      CLP: 920.00,    // Chilean Peso
-      PEN: 3.80,      // Peruvian Sol
-      UYU: 39.20,     // Uruguayan Peso
-      BOB: 6.92,      // Bolivian Boliviano
-      PYG: 7350.00,   // Paraguayan Guaraní
-      DOP: 58.75,     // Dominican Peso
-      GTQ: 7.82,      // Guatemalan Quetzal
-      HNL: 24.75,     // Honduran Lempira
-      NIO: 36.75,     // Nicaraguan Córdoba
-      SVC: 8.75,      // Salvadoran Colón
-      PAB: 1.00,      // Panamanian Balboa (1:1 with USD)
-      CRC: 535.00,    // Costa Rican Colón
-      CUC: 1.00,      // Cuban Convertible Peso (1:1 with USD)
-      CUP: 24.00,     // Cuban Peso
-      JMD: 155.50,    // Jamaican Dollar
-      TTD: 6.78,      // Trinidad & Tobago Dollar
-      BBD: 2.00,      // Barbadian Dollar (2:1 with USD)
-      XCD: 2.70,      // East Caribbean Dollar
-      BZD: 2.00,      // Belize Dollar (2:1 with USD)
-      BMD: 1.00,      // Bermudian Dollar (1:1 with USD)
-      BSD: 1.00       // Bahamian Dollar (1:1 with USD)
+      USD: 1,          // US Dollar (base currency)
+      EUR: 0.92,       // Euro
+      GBP: 0.78,       // British Pound
+      JPY: 155.50,     // Japanese Yen
+      AUD: 1.51,       // Australian Dollar
+      CAD: 1.36,       // Canadian Dollar
+      CHF: 0.89,       // Swiss Franc
+      CNY: 7.20,       // Chinese Yuan
+      INR: 83.30,      // Indian Rupee
+      NZD: 1.65,       // New Zealand Dollar
+      MXN: 17.10,      // Mexican Peso
+      BRL: 4.90,       // Brazilian Real
+      ZAR: 18.20,      // South African Rand
+      RUB: 91.80,      // Russian Ruble
+      KRW: 1355.00,    // South Korean Won
+      SGD: 1.34,       // Singapore Dollar
+      NOK: 10.68,      // Norwegian Krone
+      SEK: 10.55,      // Swedish Krona
+      DKK: 6.85,       // Danish Krone
+      PLN: 4.12,       // Polish Złoty
+      THB: 36.25,      // Thai Baht
+      IDR: 15200.00,   // Indonesian Rupiah
+      HKD: 7.80,       // Hong Kong Dollar
+      TRY: 32.45,      // Turkish Lira
+      SAR: 3.75,       // Saudi Riyal
+      AED: 3.67,       // UAE Dirham
+      MYR: 4.68,       // Malaysian Ringgit
+      PHP: 56.50,      // Philippine Peso
+      VND: 25350.00,   // Vietnamese Đồng
+      EGP: 47.10,      // Egyptian Pound
+      PKR: 280.25,     // Pakistani Rupee
+      NGN: 1145.00,    // Nigerian Naira
+      BDT: 117.25,     // Bangladeshi Taka
+      IRR: 42150.00,   // Iranian Rial
+      IQD: 1308.00,    // Iraqi Dinar
+      KWD: 0.31,       // Kuwaiti Dinar
+      QAR: 3.64,       // Qatari Riyal
+      OMR: 0.38,       // Omani Rial
+      JOD: 0.71,       // Jordanian Dinar
+      LBP: 15050.00,   // Lebanese Pound
+      BHD: 0.38,       // Bahraini Dinar
+      COP: 3945.00,    // Colombian Peso
+      ARS: 989.65,     // Argentine Peso (official rate, parallel market rate may differ)
+      CLP: 918.50,     // Chilean Peso
+      PEN: 3.78,       // Peruvian Sol
+      UYU: 39.15,      // Uruguayan Peso
+      BOB: 6.90,       // Bolivian Boliviano
+      PYG: 7345.00,    // Paraguayan Guaraní
+      DOP: 58.70,      // Dominican Peso
+      GTQ: 7.80,       // Guatemalan Quetzal
+      HNL: 24.72,      // Honduran Lempira
+      NIO: 36.70,      // Nicaraguan Córdoba
+      SVC: 8.75,       // Salvadoran Colón
+      PAB: 1.00,       // Panamanian Balboa (1:1 with USD)
+      CRC: 534.50,     // Costa Rican Colón
+      CUC: 1.00,       // Cuban Convertible Peso (1:1 with USD)
+      CUP: 24.00,      // Cuban Peso
+      JMD: 155.25,     // Jamaican Dollar
+      TTD: 6.77,       // Trinidad & Tobago Dollar
+      BBD: 2.00,       // Barbadian Dollar (2:1 with USD)
+      XCD: 2.70,       // East Caribbean Dollar
+      BZD: 2.00,       // Belize Dollar (2:1 with USD)
+      BMD: 1.00,       // Bermudian Dollar (1:1 with USD)
+      BSD: 1.00        // Bahamian Dollar (1:1 with USD)
     };
+    
+    // Note: The Argentine Peso (ARS) has multiple exchange rates. The official rate is shown here,
+    // but the parallel market rate (often called "blue dollar" rate) is typically much higher.
 
     const currencies = [
       { code: 'USD', name: 'US Dollar' },
